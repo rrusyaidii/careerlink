@@ -22,11 +22,6 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
-app.post("/api/v1/test", (req, res) => {
-  const { name } = req.body;
-  res.json({ message: `hello ${name}` });
-});
-
 // ROUTE BASE URL
 app.use("/api/v1/jobs", jobRouter);
 
