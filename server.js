@@ -8,6 +8,7 @@ import mongoose from "mongoose";
 
 //ROUTERS
 import jobRouter from "./routes/jobRouter.js";
+import authRouter from "./routes/authRouter.js";
 
 //MIDDLEWARE
 import errorHandlerMiddleware from "./middleware/errorHandlerMiddleware.js";
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
 
 // ROUTE BASE URL
 app.use("/api/v1/jobs", jobRouter);
+app.use("/api/v1/auth", authRouter);
 
 // Not Found Middleware
 app.use("*", (req, res, next) => {
