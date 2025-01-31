@@ -42,7 +42,7 @@ export const validateJobInput = withValidationErrors([
 export const validateIdParam = withValidationErrors([
   param("id").custom(async (value, { req }) => {
     const isValidId = mongoose.Types.ObjectId.isValid(value);
-    if (!isValidId) throw new BadRequestError("invalid MongoDB id");
+    if (!isValidId) throw new BadRequestError("Invalid MongoDB ID");
     //NO NEED TO PUT AT CONTROLLER FOR VALIDATION LAYER
 
     const job = await Job.findById(value);
@@ -88,18 +88,18 @@ export const validateLoginInput = withValidationErrors([
 ]);
 
 export const validateUpdateUserInput = withValidationErrors([
-  body("name").notEmpty().withMessage("name is required"),
+  body("name").notEmpty().withMessage("Name is required"),
   body("email")
     .notEmpty()
-    .withMessage("email is required")
+    .withMessage("Email is required")
     .isEmail()
-    .withMessage("invalid email format")
+    .withMessage("Invalid email format")
     .custom(async (email, { req }) => {
       const user = await User.findOne({ email });
       if (user && user._id.toString() !== req.user.userId) {
         throw new Error("Email already exists");
       }
     }),
-  body("lastName").notEmpty().withMessage("last name is required"),
-  body("location").notEmpty().withMessage("location is required"),
+  body("lastName").notEmpty().withMessage("Last name is required"),
+  body("location").notEmpty().withMessage("Location is required"),
 ]);

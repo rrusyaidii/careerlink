@@ -15,6 +15,7 @@ const NavLinks = (isBigSidebar) => {
             key={text} // Unique key for each link
             className="nav-link" // Class for styling
             onClick={isBigSidebar ? null : toggleSidebar} // Close the sidebar on link click
+            end
           >
             <span className="icon">{icon}</span> {/* Display icon */}
             {text} {/* Display link text */}

@@ -8,10 +8,8 @@ export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
   try {
-    console.log("NUNEZ", data);
-
     await customFetch.post("/auth/login", data);
-    toast.success("Login successful");
+    toast.success("Login successful", { autoClose: 2000 });
     return redirect("/dashboard");
   } catch (error) {
     toast.error(error?.response?.data?.msg, { autoClose: 2000 });
@@ -21,7 +19,6 @@ export const action = async ({ request }) => {
 
 const Login = () => {
   const navigation = useNavigation();
-  console.log(navigation);
   const isSubmitting = navigation.state === "submitting";
 
   return (
