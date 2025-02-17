@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.article`
   background: var(--background-secondary-color);
@@ -66,12 +66,18 @@ const Wrapper = styled.article`
     display: flex;
     align-items: center;
   }
-  .edit-btn,
+  .edit-btn {
+    height: 30px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+  }
   .delete-btn {
     height: 30px;
     font-size: 0.85rem;
     display: flex;
     align-items: center;
+    background-color: #d66a6a;
   }
   .edit-btn {
     margin-right: 0.5rem;

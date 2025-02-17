@@ -9,6 +9,8 @@ const NavLinks = (isBigSidebar) => {
       {/* Dynamically generate navigation links from the links array */}
       {links.map((link) => {
         const { text, path, icon } = link;
+        const { role } = user;
+        if (role !== "Admin" && path === "admin") return;
         return (
           <NavLink
             to={path} // Path for navigation
