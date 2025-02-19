@@ -15,6 +15,7 @@ export const action = async ({ request }) => {
     return redirect("all-jobs");
   } catch (error) {
     toast.error(error?.response?.data?.msg, { autoClose: 2000 });
+    return null;
   }
 };
 
