@@ -13,7 +13,7 @@ const links = [
     icon: <FaWpforms />,
   },
   {
-    text: "all job",
+    text: "all jobs",
     path: "all-jobs",
     icon: <MdQueryStats />,
   },

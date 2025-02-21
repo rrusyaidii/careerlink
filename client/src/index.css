@@ -316,16 +316,25 @@ button:disabled {
 }
 
 /* BUTTONS AND BADGES */
-.Pending {
-  background: #fef3c7;
-  color: #f59e0b;
+.Interview {
+  background: linear-gradient(to right, #154cc4, #1e6af9);
+  color: #e9eaee;
 }
 
-.Interview {
-  background: #e0e8f9;
-  color: #647acb;
-}
 .Declined {
-  background: #ffeeee;
-  color: #d66a6a;
+  background: linear-gradient(
+    to right,
+    #b22222,
+    #8b0000
+  ); /* Dark red gradient */
+  color: #ffffff;
+}
+
+.Pending {
+  background: linear-gradient(
+    to right,
+    #7a5800,
+    #5a3e00
+  ); /* Dark gold/brown gradient */
+  color: #facc15;
 }
