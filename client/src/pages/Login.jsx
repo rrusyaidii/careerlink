@@ -34,6 +34,14 @@ const Login = () => {
   };
   return (
     <Wrapper>
+      <div className="credentials-box">
+        <p>
+          <strong>Email:</strong> admin@admin.com
+        </p>
+        <p>
+          <strong>Password:</strong> secret123
+        </p>
+      </div>
       <Form method="post" className="form">
         <Logo />
         <h4>login</h4>
