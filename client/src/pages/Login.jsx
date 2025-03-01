@@ -36,10 +36,10 @@ const Login = () => {
     <Wrapper>
       <div className="credentials-box">
         <p>
-          <strong>Email:</strong> admin@admin.com
+          <strong>Email :</strong> admin@admin.com
         </p>
         <p>
-          <strong>Password:</strong> secret123
+          <strong>Password :</strong> secret123
         </p>
       </div>
       <Form method="post" className="form">
