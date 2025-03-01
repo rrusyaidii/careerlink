@@ -33,13 +33,16 @@ const Wrapper = styled.section`
   }
   .credentials-box {
     background: rgb(0, 0, 0);
-    /* padding: -10px; */
+    color: white; /* Ensures text is visible in dark mode */
     border: 1px solid #ddd;
     border-radius: 5px;
     max-width: 250px;
     margin: 0 auto 1rem;
     text-align: center;
     font-size: 0.9rem;
+  }
+  .credentials-box p {
+    color: white; /* Ensures visibility in light mode */
   }
 `;
 export default Wrapper;
