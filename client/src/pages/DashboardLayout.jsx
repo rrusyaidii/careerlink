@@ -5,6 +5,7 @@ import { useState, createContext, useContext } from "react";
 import customFetch from "../../../utils/customFetch";
 import { toast } from "react-toastify";
 import { checkDefaultTheme } from "../App";
+import Chatbot from "../components/Chatbot";
 
 export const loader = async () => {
   try {
@@ -72,6 +73,7 @@ const DashboardLayout = ({ isDarkThemeEnabled }) => {
           </div>
         </main>
       </Wrapper>
+      <Chatbot />
     </DashboardContext.Provider>
   );
 };
